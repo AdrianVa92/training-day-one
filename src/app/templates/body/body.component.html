@@ -1,0 +1,27 @@
+<div class="container px-2 py-5">
+    <h2>Welcome {{ name }}!</h2>
+    <br>
+    <h4>Enter Your Name:</h4>
+    <div class="form-group">
+        <input type="text" class="form-control" [(ngModel)]="name">
+    </div>
+    <br>
+    <div class="">
+        <div *ngIf="name==='paimon'">
+            <img src="../../assets/images/paimon.png" alt="" class="w-100">
+        </div>
+        <div *ngIf="name==='bean'">
+            <img src="../../assets/images/bean.jpg" alt="" class="w-100">
+        </div>
+        <div *ngIf="name==='goku'">
+            <img src="../../assets/images/goku.jpg" alt="" class="w-100">
+        </div>
+        <div *ngIf="name==='show secret'">
+            <div class="container">
+                <h4>Secret Button</h4>
+                <input type="text" class="form-control" [(ngModel)]="color">
+                <br>
+                <button type="submit" class="btn btn-info" (click)="onClick()">Submit</button>
+        </div>
+    </div>
+</div>
